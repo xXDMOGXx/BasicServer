@@ -16,13 +16,16 @@ public class Main {
     // A ServerSocket is like management overlooking the tunnel
     private static ServerSocket serverSocket;
     // The ConnectionHandler... well.... handles the connection
-    private static ConnectionHandler connectionHandler;
+    public static ConnectionHandler connectionHandler;
     // The port can be any combination of 5 digits at or under 65535
     // as long as the bot connects to the exact same port on its end
     // (Some ports will likely already be used on your computer)
     private static final int port = 61134;
 
+    public static boolean autoEnabled = true;
+
     public static void main(String[] args) {
+        new ServerKeyListener();
         // When the file runs, just opens the connection with the specified port
         openConnection(port);
     }
@@ -43,7 +46,7 @@ public class Main {
         connectionHandler.startAccepting();
 
         // Accepts input from the console, so you can actually control the server
-        consoleInput();
+        //consoleInput();
     }
 
     // Will read inout from the console.

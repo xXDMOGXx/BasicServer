@@ -14,9 +14,7 @@ public enum MessageType {
     ENABLE_DRIVE,
     SEND_LEFT,
     SEND_RIGHT,
-    SEND_WEAPON,
-    ENABLE_AUTO,
-    DISABLE_AUTO;
+    SEND_WEAPON;
 
     // Unlike c++, Java doesn't store enumerators as ascending
     // integers starting from zero. Thus, we have to do crap like this
@@ -33,8 +31,6 @@ public enum MessageType {
             case 8 -> SEND_LEFT;
             case 9 -> SEND_RIGHT;
             case 10 -> SEND_WEAPON;
-            case 11 -> ENABLE_AUTO;
-            case 12 -> DISABLE_AUTO;
             default -> null;
         };
     }
